@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+aiohttp
+PyPDF2
+python-docx
+pinecone-client
+xai
+python-dotenv
+sqlalchemy
+redis
+fastapi-cache
+pydantic-settings

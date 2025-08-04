@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: grok-query-retrieval
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROK_API_KEY
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: PINECONE_ENVIRONMENT
+        value: us-west1-gcp
+      - key: PINECONE_INDEX_NAME
+        value: policy-documents
+      - key: REDIS_URL
+        sync: false
+      - key: API_TOKEN
+        sync: false
